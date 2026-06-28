@@ -67,11 +67,16 @@ app.post('/api/chat', async (req, res) => {
   }
 
   try {
+    // A API exige pelo menos 1 mensagem; na abertura enviamos um gatilho oculto
+    const messagesToSend = messages.length === 0
+      ? [{ role: 'user', content: 'Olá' }]
+      : messages;
+
     const response = await anthropic.messages.create({
       model: process.env.CLAUDE_MODEL || 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: LARA_PROMPT.replace(/\{CLIENT_NAME\}/g, clientName),
-      messages: messages
+      messages: messagesToSend
     });
 
     const raw = response.content[0].text;

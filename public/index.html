@@ -32,8 +32,6 @@
       overscroll-behavior: none;
     }
 
-    /* ─── TELA DE BOAS-VINDAS ─────────────────────────────────────── */
-
     #tela-inicio {
       display: flex;
       flex-direction: column;
@@ -110,9 +108,7 @@
       margin-bottom: 1.5rem;
     }
 
-    .card-inicio p strong {
-      color: var(--creme);
-    }
+    .card-inicio p strong { color: var(--creme); }
 
     .campo-nome {
       width: 100%;
@@ -127,13 +123,8 @@
       margin-bottom: 0.85rem;
       font-family: inherit;
     }
-
     .campo-nome::placeholder { color: var(--creme-fraco); }
-
-    .campo-nome:focus {
-      border-color: var(--ouro);
-      background: rgba(255, 255, 255, 0.09);
-    }
+    .campo-nome:focus { border-color: var(--ouro); background: rgba(255,255,255,0.09); }
 
     .btn-primario {
       width: 100%;
@@ -149,7 +140,6 @@
       transition: background 0.2s, opacity 0.2s, transform 0.1s;
       font-family: inherit;
     }
-
     .btn-primario:hover  { background: var(--ouro-claro); }
     .btn-primario:active { transform: scale(0.98); }
     .btn-primario:disabled { opacity: 0.5; cursor: not-allowed; }
@@ -160,8 +150,6 @@
       max-width: 320px;
     }
 
-    /* ─── TELA DE CHAT ────────────────────────────────────────────── */
-
     #tela-chat {
       display: none;
       flex-direction: column;
@@ -169,7 +157,6 @@
       height: 100dvh;
     }
 
-    /* Cabeçalho */
     .chat-header {
       display: flex;
       align-items: center;
@@ -187,65 +174,37 @@
     }
 
     .header-mono {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+      width: 40px; height: 40px; border-radius: 50%;
       border: 1px solid var(--ouro);
-      background: rgba(201, 168, 76, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--ouro);
-      flex-shrink: 0;
+      background: rgba(201,168,76,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 700; color: var(--ouro); flex-shrink: 0;
     }
-
     .header-info { flex: 1; min-width: 0; }
-
     .header-nome {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--creme);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      font-size: 0.9rem; font-weight: 600; color: var(--creme);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
-
     .header-sub {
-      font-size: 0.7rem;
-      color: var(--ouro);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 1px;
+      font-size: 0.7rem; color: var(--ouro);
+      text-transform: uppercase; letter-spacing: 1px; margin-top: 1px;
     }
 
-    /* Área de mensagens */
     #mensagens {
-      flex: 1;
-      overflow-y: auto;
+      flex: 1; overflow-y: auto;
       padding: 1.25rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
       scroll-behavior: smooth;
     }
-
     #mensagens::-webkit-scrollbar { width: 4px; }
     #mensagens::-webkit-scrollbar-track { background: transparent; }
     #mensagens::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
 
-    /* Bolhas */
-    .bolha-wrap {
-      display: flex;
-      animation: aparecer 0.25s ease forwards;
-    }
-
+    .bolha-wrap { display: flex; animation: aparecer 0.25s ease forwards; }
     @keyframes aparecer {
       from { opacity: 0; transform: translateY(6px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
     .bolha-wrap.usuario { justify-content: flex-end; }
     .bolha-wrap.lara    { justify-content: flex-start; }
 
@@ -253,188 +212,110 @@
       max-width: min(80%, 380px);
       padding: 0.75rem 1rem;
       border-radius: 16px;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      white-space: pre-wrap;
-      word-break: break-word;
+      font-size: 0.9rem; line-height: 1.6;
+      white-space: pre-wrap; word-break: break-word;
     }
-
     .bolha-wrap.usuario .bolha {
-      background: var(--verde-medio);
-      color: var(--creme);
+      background: var(--verde-medio); color: var(--creme);
       border-bottom-right-radius: 4px;
     }
-
     .bolha-wrap.lara .bolha {
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--creme);
-      border: 1px solid var(--borda);
-      border-bottom-left-radius: 4px;
+      background: rgba(255,255,255,0.08); color: var(--creme);
+      border: 1px solid var(--borda); border-bottom-left-radius: 4px;
     }
 
-    /* Indicador de digitação */
-    #digitando {
-      display: none;
-      padding: 0 1rem 0.25rem;
-    }
-
+    #digitando { display: none; padding: 0 1rem 0.25rem; }
     .dots {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--borda);
-      border-radius: 16px;
-      border-bottom-left-radius: 4px;
+      display: inline-flex; align-items: center; gap: 4px;
+      background: rgba(255,255,255,0.08); border: 1px solid var(--borda);
+      border-radius: 16px; border-bottom-left-radius: 4px;
       padding: 0.65rem 0.9rem;
     }
-
     .dots span {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--creme-fraco);
-      animation: pisca 1.2s infinite;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--creme-fraco); animation: pisca 1.2s infinite;
     }
-
     .dots span:nth-child(2) { animation-delay: 0.2s; }
     .dots span:nth-child(3) { animation-delay: 0.4s; }
-
     @keyframes pisca {
-      0%, 80%, 100% { opacity: 0.3; transform: scale(0.85); }
-      40%           { opacity: 1;   transform: scale(1); }
+      0%,80%,100% { opacity: 0.3; transform: scale(0.85); }
+      40%         { opacity: 1;   transform: scale(1); }
     }
 
-    /* Botão PDF */
-    #secao-pdf {
-      display: none;
-      padding: 0.75rem 1rem 0;
-    }
-
+    #secao-pdf { display: none; padding: 0.75rem 1rem 0; }
     .btn-pdf {
-      width: 100%;
-      background: transparent;
-      border: 1.5px solid var(--ouro);
-      color: var(--ouro);
-      border-radius: 10px;
-      padding: 0.8rem 1rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      transition: background 0.2s, color 0.2s;
-      font-family: inherit;
+      width: 100%; background: transparent;
+      border: 1.5px solid var(--ouro); color: var(--ouro);
+      border-radius: 10px; padding: 0.8rem 1rem;
+      font-size: 0.9rem; font-weight: 600; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      transition: background 0.2s, color 0.2s; font-family: inherit;
     }
-
-    .btn-pdf:hover { background: rgba(201, 168, 76, 0.12); }
+    .btn-pdf:hover { background: rgba(201,168,76,0.12); }
     .btn-pdf:active { transform: scale(0.98); }
     .btn-pdf:disabled { opacity: 0.5; cursor: not-allowed; }
 
-    /* Área de input */
     .area-input {
       padding: 0.75rem 1rem;
       padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
       border-top: 1px solid var(--borda);
-      background: rgba(10, 61, 32, 0.95);
-      display: flex;
-      gap: 0.5rem;
-      align-items: flex-end;
-      flex-shrink: 0;
+      background: rgba(10,61,32,0.95);
+      display: flex; gap: 0.5rem; align-items: flex-end; flex-shrink: 0;
     }
-
     #campo-msg {
-      flex: 1;
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      padding: 0.7rem 0.9rem;
-      font-size: 0.9rem;
-      color: var(--creme);
-      outline: none;
-      resize: none;
-      max-height: 120px;
-      overflow-y: auto;
-      transition: border-color 0.2s;
-      font-family: inherit;
-      line-height: 1.5;
+      flex: 1; background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px; padding: 0.7rem 0.9rem;
+      font-size: 0.9rem; color: var(--creme); outline: none;
+      resize: none; max-height: 120px; overflow-y: auto;
+      transition: border-color 0.2s; font-family: inherit; line-height: 1.5;
     }
-
     #campo-msg::placeholder { color: var(--creme-fraco); }
-    #campo-msg:focus { border-color: rgba(201, 168, 76, 0.6); }
+    #campo-msg:focus { border-color: rgba(201,168,76,0.6); }
     #campo-msg:disabled { opacity: 0.4; }
-
     #campo-msg::-webkit-scrollbar { width: 3px; }
     #campo-msg::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
 
     .btn-enviar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--ouro);
-      border: none;
-      color: var(--verde);
-      font-size: 1.1rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: background 0.2s, transform 0.1s;
-      font-weight: 700;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--ouro); border: none; color: var(--verde);
+      font-size: 1.1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: background 0.2s, transform 0.1s; font-weight: 700;
     }
-
     .btn-enviar:hover  { background: var(--ouro-claro); }
     .btn-enviar:active { transform: scale(0.92); }
     .btn-enviar:disabled { opacity: 0.4; cursor: not-allowed; }
 
     .dica-input {
-      text-align: center;
-      font-size: 0.68rem;
-      color: var(--creme-fraco);
+      text-align: center; font-size: 0.68rem; color: var(--creme-fraco);
       padding: 0 1rem 0.5rem;
-      padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
-      flex-shrink: 0;
+      padding-bottom: calc(0.5rem + env(safe-area-inset-bottom)); flex-shrink: 0;
     }
+
+    .bolha-guia-foto {
+      padding: 0.4rem;
+      max-width: min(92%, 340px) !important;
+      background: rgba(255,255,255,0.06) !important;
+      border: 1px solid var(--borda) !important;
+    }
+    .bolha-guia-foto svg { width: 100%; height: auto; display: block; border-radius: 6px; }
   </style>
 </head>
 <body>
 
-<!-- ─── TELA DE INÍCIO ──────────────────────────────────────────────── -->
-
 <div id="tela-inicio">
   <div class="monograma">RF</div>
   <h1>Rogério A. Fialho</h1>
-  <p class="subtitulo-nome">Nutrição Esportiva &amp; Comportamental</p>
-
+  <p class="subtitulo-nome">Nutricção Esportiva &amp; Comportamental</p>
   <div class="card-inicio">
     <div class="badge-tipo">Reavaliação</div>
-    <p>
-      Olá! Sou a <strong>Lara</strong>, assistente do Rogério.
-      Vou conduzir a sua reavaliação de forma tranquila e próxima,
-      coletando tudo que o Rogério precisa para calibrar ainda mais
-      o seu acompanhamento.
-    </p>
-    <input
-      type="text"
-      id="campo-nome"
-      class="campo-nome"
-      placeholder="Como posso te chamar?"
-      maxlength="60"
-      autocomplete="given-name"
-      autocapitalize="words"
-    >
-    <button class="btn-primario" id="btn-iniciar">Iniciar Reavaliação</button>
+    <p>Olá! Sou a <strong>Lara</strong>, assistente do Rogério. Vou conduzir a sua reavaliação de forma tranquila e próxima, coletando tudo que o Rogério precisa para calibrar ainda mais o seu acompanhamento.</p>
+    <input type="text" id="campo-nome" class="campo-nome" placeholder="Como posso te chamar?" maxlength="60" autocomplete="given-name" autocapitalize="words">
+    <button class="btn-primario" id="btn-iniciar">Inickar Reavaliação</button>
   </div>
-
-  <p class="nota-rodape">
-    Suas respostas são confidenciais e serão analisadas exclusivamente pelo Rogério.
-  </p>
+  <p class="nota-rodape">Suas respostas são confidenciais e serão analisadas exclusivamente pelo Rogério.</p>
 </div>
-
-<!-- ─── TELA DE CHAT ────────────────────────────────────────────────── -->
 
 <div id="tela-chat">
   <div class="chat-header">
@@ -444,425 +325,218 @@
       <div class="header-sub">Reavaliação com Lara</div>
     </div>
   </div>
-
   <div id="mensagens"></div>
-
-  <div id="digitando">
-    <div class="dots">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-
+  <div id="digitando"><div class="dots"><span></span><span></span><span></span></div></div>
   <div id="secao-pdf">
     <button class="btn-pdf" id="btn-pdf">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-        <line x1="12" y1="18" x2="12" y2="12"/>
-        <line x1="9" y1="15" x2="15" y2="15"/>
-      </svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
       Gerar Laudo em PDF
     </button>
   </div>
-
   <div class="area-input">
-    <textarea
-      id="campo-msg"
-      placeholder="Digite sua resposta..."
-      rows="1"
-    ></textarea>
-    <button class="btn-enviar" id="btn-enviar" aria-label="Enviar">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="22" y1="2" x2="11" y2="13"/>
-        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-      </svg>
-    </button>
+    <textarea id="campo-msg" placeholder="Digite sua resposta..." rows="1"></textarea>
+    <button class="btn-enviar" id="btn-enviar" aria-label="Enviar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
   </div>
   <p class="dica-input">Enter para enviar · Shift+Enter para nova linha</p>
 </div>
 
 <script>
-// ─── Estado ──────────────────────────────────────────────────────────
-
-let nomeCliente = '';
-let sessionId   = '';
-let mensagens   = [];
-let concluida   = false;
-let enviando    = false;
-
-// ─── Utilitários ─────────────────────────────────────────────────────
-
-function gerarId() {
-  return Date.now().toString(36) + Math.random().toString(36).slice(2);
-}
-
-function scrollParaBaixo() {
-  const el = document.getElementById('mensagens');
-  el.scrollTop = el.scrollHeight;
-}
-
-function mostrarDigitando() {
-  document.getElementById('digitando').style.display = 'block';
-  scrollParaBaixo();
-}
-
-function esconderDigitando() {
-  document.getElementById('digitando').style.display = 'none';
-}
-
-function adicionarMensagem(papel, texto) {
-  const wrap = document.createElement('div');
-  wrap.className = `bolha-wrap ${papel === 'user' ? 'usuario' : 'lara'}`;
-
-  const bolha = document.createElement('div');
-  bolha.className = 'bolha';
-  bolha.textContent = texto;
-
-  wrap.appendChild(bolha);
-  document.getElementById('mensagens').appendChild(wrap);
-  scrollParaBaixo();
-}
-
-function setInputAtivo(ativo) {
-  document.getElementById('campo-msg').disabled  = !ativo;
-  document.getElementById('btn-enviar').disabled = !ativo;
-}
-
-// ─── Iniciar conversa ─────────────────────────────────────────────────
-
-document.getElementById('btn-iniciar').addEventListener('click', iniciarChat);
-document.getElementById('campo-nome').addEventListener('keydown', e => {
-  if (e.key === 'Enter') iniciarChat();
-});
-
-async function iniciarChat() {
-  const nome = document.getElementById('campo-nome').value.trim();
-  if (!nome) {
-    document.getElementById('campo-nome').focus();
-    return;
-  }
-
-  nomeCliente = nome;
-  sessionId   = gerarId();
-
-  document.getElementById('tela-inicio').style.display = 'none';
-  document.getElementById('tela-chat').style.display   = 'flex';
-
-  setInputAtivo(false);
-  mostrarDigitando();
-
-  try {
-    const resp = await chamarChat([]);
-    esconderDigitando();
-    adicionarMensagem('assistant', resp.message);
-    mensagens.push({ role: 'assistant', content: resp.message });
-    setInputAtivo(true);
-    document.getElementById('campo-msg').focus();
-  } catch (e) {
-    esconderDigitando();
-    adicionarMensagem('assistant', 'Oi! Tive um problema técnico. Pode atualizar a página e tentar novamente?');
-    setInputAtivo(false);
-  }
-}
-
-// ─── Enviar mensagem ──────────────────────────────────────────────────
-
-document.getElementById('btn-enviar').addEventListener('click', enviarMensagem);
-
-document.getElementById('campo-msg').addEventListener('keydown', e => {
-  if (e.key === 'Enter' && !e.shiftKey) {
-    e.preventDefault();
-    enviarMensagem();
-  }
-});
-
-document.getElementById('campo-msg').addEventListener('input', function () {
-  this.style.height = 'auto';
-  this.style.height = Math.min(this.scrollHeight, 120) + 'px';
-});
-
-async function enviarMensagem() {
-  if (enviando || concluida) return;
-
-  const campo = document.getElementById('campo-msg');
-  const texto = campo.value.trim();
-  if (!texto) return;
-
-  enviando = true;
-  campo.value = '';
-  campo.style.height = 'auto';
-  setInputAtivo(false);
-
-  adicionarMensagem('user', texto);
-  mensagens.push({ role: 'user', content: texto });
-
-  mostrarDigitando();
-
-  try {
-    const resp = await chamarChat(mensagens);
-    esconderDigitando();
-    adicionarMensagem('assistant', resp.message);
-    mensagens.push({ role: 'assistant', content: resp.message });
-
-    if (resp.completed) {
-      concluida = true;
-      document.getElementById('secao-pdf').style.display = 'block';
-      // Não reabilitar o input
-    } else {
-      setInputAtivo(true);
-      campo.focus();
-    }
-  } catch (e) {
-    esconderDigitando();
-    adicionarMensagem('assistant', 'Ops, tive um problema técnico. Pode tentar enviar de novo?');
-    setInputAtivo(true);
-    campo.focus();
-  }
-
-  enviando = false;
-}
-
-async function chamarChat(msgs) {
-  const res = await fetch('/api/chat', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      messages:   msgs,
-      clientName: nomeCliente,
-      sessionId
-    })
-  });
-
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}));
-    throw new Error(err.error || 'Erro de comunicação.');
-  }
-
-  return res.json();
-}
-
-// ─── Geração de PDF ───────────────────────────────────────────────────
-
-document.getElementById('btn-pdf').addEventListener('click', gerarPDF);
-
-async function gerarPDF() {
-  const btn = document.getElementById('btn-pdf');
-  btn.disabled = true;
-  btn.innerHTML = `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:girar 1s linear infinite">
-      <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
-    </svg>
-    Gerando PDF...
-  `;
-
-  try {
-    const res = await fetch('/api/summarize', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        conversation: mensagens,
-        clientName:   nomeCliente,
-        sessionId
-      })
-    });
-
-    if (!res.ok) throw new Error();
-
-    const resumo = await res.json();
-    renderizarPDF(resumo);
-  } catch (e) {
-    alert('Não foi possível gerar o PDF. Tente novamente.');
-  } finally {
-    btn.disabled = false;
-    btn.innerHTML = `
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-        <line x1="12" y1="18" x2="12" y2="12"/>
-        <line x1="9" y1="15" x2="15" y2="15"/>
-      </svg>
-      Gerar Laudo em PDF
-    `;
-  }
-}
-
-function renderizarPDF(r) {
-  const { jsPDF } = window.jspdf;
-  const doc  = new jsPDF({ unit: 'mm', format: 'a4' });
-  const pW   = doc.internal.pageSize.getWidth();
-  const pH   = doc.internal.pageSize.getHeight();
-  const marg = 20;
-  const cW   = pW - 2 * marg;
-
-  // Paleta
-  const VERDE  = [10, 61, 32];
-  const VERDE2 = [26, 92, 50];
-  const OURO   = [201, 168, 76];
-  const CREME  = [245, 240, 232];
-  const ESCURO = [40, 40, 40];
-  const CINZA  = [110, 110, 110];
-
-  // ── Cabeçalho ──────────────────────────────────────────────────────
-
-  doc.setFillColor(...VERDE);
-  doc.rect(0, 0, pW, 48, 'F');
-
-  // Círculo monograma
-  doc.setDrawColor(...OURO);
-  doc.setLineWidth(0.6);
-  doc.circle(marg + 11, 24, 11, 'S');
-  doc.setTextColor(...OURO);
-  doc.setFontSize(13);
-  doc.setFont('helvetica', 'bold');
-  doc.text('RF', marg + 11, 27.5, { align: 'center' });
-
-  // Nome e cargo
-  doc.setTextColor(...CREME);
-  doc.setFontSize(15);
-  doc.setFont('helvetica', 'bold');
-  doc.text('Rogério A. Fialho', marg + 27, 20);
-
-  doc.setFontSize(8.5);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...OURO);
-  doc.text('Nutrição Esportiva & Comportamental', marg + 27, 27);
-
-  // Tipo e data no canto direito
-  doc.setTextColor(...CREME);
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'bold');
-  doc.text('REAVALIAÇÃO', pW - marg, 20, { align: 'right' });
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(8);
-  doc.setTextColor(...OURO);
-  doc.text(r.data || new Date().toLocaleDateString('pt-BR'), pW - marg, 27, { align: 'right' });
-
-  // Faixa com nome do cliente
-  doc.setFillColor(...VERDE2);
-  doc.rect(0, 48, pW, 16, 'F');
-  doc.setTextColor(...CREME);
-  doc.setFontSize(11);
-  doc.setFont('helvetica', 'bold');
-  doc.text(nomeCliente, marg, 59.5);
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(8);
-  doc.setTextColor(...OURO);
-  doc.text('Relatório de Reavaliação', pW - marg, 59.5, { align: 'right' });
-
-  // ── Seções ─────────────────────────────────────────────────────────
-
-  const secoes = [
-    { chave: 'bem_estar',          titulo: 'Bem-estar e Disposição' },
-    { chave: 'atividades_diarias', titulo: 'Atividades do Dia a Dia' },
-    { chave: 'alimentacao',        titulo: 'Alimentação e Adesão ao Plano' },
-    { chave: 'percepcao_corporal', titulo: 'Percepção Corporal' },
-    { chave: 'motivacao',          titulo: 'Motivação e Desafios' },
-    { chave: 'pontos_fortes',      titulo: 'Pontos Fortes' },
-    { chave: 'pontos_atencao',     titulo: 'Pontos de Atenção' },
-    { chave: 'nota_rogerio',       titulo: 'Nota para o Rogério' }
-  ];
-
-  let y = 74;
-
-  function adicionarPagina() {
-    adicionarRodape();
-    doc.addPage();
-    // Mini cabeçalho nas páginas seguintes
-    doc.setFillColor(...VERDE);
-    doc.rect(0, 0, pW, 14, 'F');
-    doc.setTextColor(...OURO);
-    doc.setFontSize(7.5);
-    doc.setFont('helvetica', 'bold');
-    doc.text('RF  ·  ROGÉRIO A. FIALHO', marg, 9);
-    doc.setTextColor(...CREME);
-    doc.setFont('helvetica', 'normal');
-    doc.text(nomeCliente + '  ·  REAVALIAÇÃO', pW - marg, 9, { align: 'right' });
-    y = 24;
-  }
-
-  function adicionarRodape() {
-    doc.setFillColor(...VERDE);
-    doc.rect(0, pH - 12, pW, 12, 'F');
-    doc.setTextColor(...OURO);
-    doc.setFontSize(7);
-    doc.setFont('helvetica', 'normal');
-    doc.text('Rogério A. Fialho · Nutrição Esportiva & Comportamental', marg, pH - 4.5);
-    const pg = doc.internal.getCurrentPageInfo().pageNumber;
-    doc.text(`Página ${pg}`, pW - marg, pH - 4.5, { align: 'right' });
-  }
-
-  for (const sec of secoes) {
-    const conteudo = r[sec.chave];
-    if (!conteudo || conteudo.trim() === '') continue;
-
-    // Verificar espaço na página
-    if (y > pH - 50) adicionarPagina();
-
-    // Linha decorativa acima do título
-    doc.setDrawColor(...OURO);
-    doc.setLineWidth(0.3);
-    doc.line(marg, y, marg + cW, y);
-    y += 1;
-
-    // Título da seção
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...VERDE);
-    doc.text(sec.titulo.toUpperCase(), marg, y + 5);
-
-    // Destaque especial para "Nota para o Rogério"
-    if (sec.chave === 'nota_rogerio') {
-      doc.setFillColor(245, 240, 232);
-      const linhas = doc.splitTextToSize(conteudo, cW - 8);
-      const altCaixa = linhas.length * 5.5 + 12;
-      doc.roundedRect(marg, y + 9, cW, altCaixa, 3, 3, 'F');
-      doc.setDrawColor(...OURO);
-      doc.setLineWidth(0.5);
-      doc.roundedRect(marg, y + 9, cW, altCaixa, 3, 3, 'S');
-      y += 13;
-      doc.setTextColor(...VERDE);
-      doc.setFont('helvetica', 'italic');
-      doc.setFontSize(9.5);
-      doc.text(linhas, marg + 4, y + 3);
-      y += linhas.length * 5.5 + 14;
-      continue;
-    }
-
-    y += 9;
-
-    // Corpo do texto
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9.5);
-    doc.setTextColor(...ESCURO);
-    const linhas = doc.splitTextToSize(conteudo, cW);
-
-    for (let i = 0; i < linhas.length; i++) {
-      if (y > pH - 22) adicionarPagina();
-      doc.text(linhas[i], marg, y);
-      y += 5.5;
-    }
-
-    y += 6;
-  }
-
-  adicionarRodape();
-
-  // ── Download ────────────────────────────────────────────────────────
-
-  const dataHoje = new Date().toLocaleDateString('pt-BR').replace(/\//g, '-');
-  const nomeSanitizado = nomeCliente.replace(/[^a-zA-ZÀ-ÿ0-9 ]/g, '').replace(/ /g, '_');
-  doc.save(`Reavaliacao_${nomeSanitizado}_${dataHoje}.pdf`);
-}
-</script>
-
-<style>
-  @keyframes girar {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-  }
-</style>
-
-</body>
-</html>
+const SVG_FOTOS = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190"><rect width="300" height="190" fill="#0a3d20" rx="8"/><text x="150" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#c9a84c" letter-spacing="1.5">GUIA DAS FOTOS</text><line x1="100" y1="25" x2="100" y2="163" stroke="rgba(255,255,255,0.12)" stroke-width="1"/><line x1="200" y1="25" x2="200" y2="163" stroke="rgba(255,255,255,0.12)" stroke-width="1"/><circle cx="50" cy="47" r="9" fill="none" stroke="#f5f0e8" stroke-width="1.5"/><circle cx="47" cy="46" r="1.2" fill="#f5f0e8"/><circle cx="53" cy="46" r="1.2" fill="#f5f0e8"/><line x1="50" y1="56" x2="50" y2="100" stroke="#f5f0e8" stroke-width="1.5"/><line x1="28" y1="66" x2="72" y2="66" stroke="#f5f0e8" stroke-width="1.2"/><line x1="28" y1="66" x2="16" y2="93" stroke="#f5f0e8" stroke-width="1.5"/><line x1="72" y1="66" x2="84" y2="93" stroke="#f5f0e8" stroke-width="1.5"/><line x1="37" y1="100" x2="63" y2="100" stroke="#f5f0e8" stroke-width="1.2"/><line x1="37" y1="100" x2="28" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><line x1="63" y1="100" x2="72" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><line x1="21" y1="142" x2="35" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><line x1="65" y1="142" x2="79" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><text x="50" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#c9a84c">FRENTE</text><text x="50" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="rgba(245,240,232,0.5)">pés na largura do quadril</text><circle cx="150" cy="47" r="9" fill="none" stroke="#f5f0e8" stroke-width="1.5"/><line x1="150" y1="56" x2="150" y2="100" stroke="#f5f0e8" stroke-width="1.5"/><line x1="128" y1="66" x2="172" y2="66" stroke="#f5f0e8" stroke-width="1.2"/><line x1="128" y1="66" x2="116" y2="93" stroke="#f5f0e8" stroke-width="1.5"/><line x1="172" y1="66" x2="184" y2="93" stroke="#f5f0e8" stroke-width="1.5"/><line x1="137" y1="100" x2="163" y2="100" stroke="#f5f0e8" stroke-width="1.2"/><line x1="137" y1="100" x2="128" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><line x1="163" y1="100" x2="172" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><line x1="121" y1="142" x2="135" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><line x1="165" y1="142" x2="179" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><rect x="132" y="57" width="36" height="40" fill="rgba(201,168,76,0.18)" rx="3"/><text x="150" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#c9a84c">COSTAS</text><text x="150" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="rgba(245,240,232,0.5)">costas à mostra</text><circle cx="250" cy="47" r="9" fill="none" stroke="#f5f0e8" stroke-width="1.5"/><path d="M257 45 Q263 47 257 50" fill="none" stroke="#f5f0e8" stroke-width="1.2"/><line x1="250" y1="56" x2="250" y2="100" stroke="#f5f0e8" stroke-width="1.5"/><line x1="244" y1="65" x2="256" y2="65" stroke="#f5f0e8" stroke-width="1.2"/><line x1="254" y1="67" x2="259" y2="100" stroke="#f5f0e8" stroke-width="1.5"/><line x1="246" y1="100" x2="254" y2="100" stroke="#f5f0e8" stroke-width="1.2"/><line x1="247" y1="100" x2="240" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><line x1="253" y1="100" x2="260" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><line x1="240" y1="142" x2="221" y2="142" stroke="#f5f0e8" stroke-width="1.5"/><polygon points="218,142 224,138 224,146" fill="#c9a84c"/><text x="250" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#c9a84c">LATERAL</text><text x="250" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="rgba(245,240,232,0.5)">braç[���Y�0��0�H���Y\�O�^��X�H��OH�M���YH���ZY�H����[H��ؘJ��H�Ϗ^H�ML�OH�NȈ^X[��܏H�ZYH��۝Y�[Z[OH�\�X[�[��\�\�Y���۝\�^�OH���H��[H��ؘJ�KM�
+͋�
+JH���[[\��\�X�[0��[X�Y��0���Y]���0���ܜ�[�Z\���^��ݙϘ��[��[ۈ[���\��ZXQ����
+H�ۜ��ZYUܘ\H��[Y[��ܙX]Q[[Y[�
+	�]��N�ZYUܘ\��\�Ә[YHH	؛�K]ܘ\\�I��ۜ��ZYP��HH��[Y[��ܙX]Q[[Y[�
+	�]��N�ZYP��K��\�Ә[YHH	؛�H��KY�ZXKY�����ZYP��K�[��\�SHՑ�ѓ����ZYUܘ\�\[��[
+�ZYP��JN��[Y[���][[Y[��RY
+	�Y[��Y�[���K�\[��[
+�ZYUܘ\
+N�ܛ�\�P�Z^�
+NB��]��YP�Y[�HH	���\��[ےYH	��Y[��Y�[��H�K�ۘ�ZYHH�[�K[��X[��H�[�N��[��[ۈ�\�\�Y
+
+H��]\��]K����
+K����[��͊H
+�X]��[��J
+K����[��͊K��X�J�N�B��[��[ۈ�ܛ�\�P�Z^�
+H��ۜ�[H��[Y[���][[Y[��RY
+	�Y[��Y�[���N�[��ܛ��H[��ܛ�ZY��B��[��[ۈ[���\�Y�][��
+H���[Y[���][[Y[��RY
+	�Y�][���K��[K�\�^HH	؛������ܛ�\�P�Z^�
+N�B��[��[ۈ\��ۙ\�Y�][��
+H���[Y[���][[Y[��RY
+	�Y�][���K��[K�\�^HH	ۛۙI��B��[��[ۈ�][�]]]��]]��H���[Y[���][[Y[��RY
+	��[\�[\���K�\�X�YHX]]�����[Y[���][[Y[��RY
+	؝�Y[��X\��K�\�X�YHX]]���B��[��[ۈYX�[ۘ\�Y[��Y�[J\[^�H�ۜ�ܘ\H��[Y[��ܙX]Q[[Y[�
+	�]��Nܘ\��\�Ә[YHH��K]ܘ\	�\[OOH	�\�\���	�\�X\�[���	�\�I�X�ۜ���HH��[Y[��ܙX]Q[[Y[�
+	�]��N��K��\�Ә[YHH	؛�I���K�^�۝[�H^�ܘ\�\[��[
+��JN��[Y[���][[Y[��RY
+	�Y[��Y�[���K�\[��[
+ܘ\
+N�ܛ�\�P�Z^�
+NB����[Y[���][[Y[��RY
+	؝�Z[�X�X\��K�Y]�[�\�[�\�	��X���[�X�X\��]
+N��[Y[���][[Y[��RY
+	��[\�[��YI�K�Y]�[�\�[�\�	��^Y�ۉ�HO��Y�
+K��^HOOH	�[�\��H[�X�X\��]
+
+N�JN�\�[���[��[ۈ[�X�X\��]
+
+H�ۜ���YHH��[Y[���][[Y[��RY
+	��[\�[��YI�K��[YK��[J
+NY�
+[��YJH���[Y[���][[Y[��RY
+	��[\�[��YI�K����\�
+N��]\���B���YP�Y[�HH��YN��\��[ےYH�\�\�Y
+
+N��[Y[���][[Y[��RY
+	�[KZ[�X�[��K��[K�\�^HH	ۛۙI���[Y[���][[Y[��RY
+	�[KX�]	�K��[K�\�^HH	ٛ^	��][�]]]���[�JN�[���\�Y�][��
+N�H�ۜ��\�H]�Z]�[X\��]
+�JN\��ۙ\�Y�][��
+NYX�[ۘ\�Y[��Y�[J	�\��\�[�	��\��Y\��Y�JNY[��Y�[�˜\�
+���N�	�\��\�[�	��۝[���\��Y\��Y�HJNY�
+�\��������ZYJH[���\��ZXQ����
+N�][�]]]���YJN���[Y[���][[Y[��RY
+	��[\�[\���K����\�
+NH�]�
+JH\��ۙ\�Y�][��
+NYX�[ۘ\�Y[��Y�[J	�\��\�[�	�	��HH]�H[H�؛[XH0�XۚX�ˈ�H]X[^�\�H0�Y�[�HH[�\��ݘ[Y[�O��N�][�]]]���[�JNB�B����[Y[���][[Y[��RY
+	؝�Y[��X\��K�Y]�[�\�[�\�	��X���[��X\�Y[��Y�[JN��[Y[���][[Y[��RY
+	��[\�[\���K�Y]�[�\�[�\�	��^Y�ۉ�HO�Y�
+K��^HOOH	�[�\��	��YK��Y��^JH�K��]�[�Y�][
+
+N�[��X\�Y[��Y�[J
+N�B�JN��[Y[���][[Y[��RY
+	��[\�[\���K�Y]�[�\�[�\�	�[�]	��[��[ۊ
+H\˜�[K�ZY�H	�]]���\˜�[K�ZY�HX]�Z[�\˜�ܛ�ZY�L�
+H
+�	�	�JN�\�[���[��[ۈ[��X\�Y[��Y�[J
+HY�
+[��X[���ۘ�ZYJH�]\���ۜ��[\�H��[Y[���][[Y[��RY
+	��[\�[\���N�ۜ�^�H�[\˝�[YK��[J
+NY�
+]^�H�]\��[��X[��H�YN��[\˝�[YHH	����[\˜�[K�ZY�H	�]]���][�]]]���[�JNYX�[ۘ\�Y[��Y�[J	�\�\��^�NY[��Y�[�˜\�
+���N�	�\�\���۝[��^�JN[���\�Y�][��
+N�H�ۜ��\�H]�Z]�[X\��]
+Y[��Y�[��N\��ۙ\�Y�][��
+NYX�[ۘ\�Y[��Y�[J	�\��\�[�	��\��Y\��Y�JNY[��Y�[�˜\�
+���N�	�\��\�[�	��۝[���\��Y\��Y�HJNY�
+�\��������ZYJH[���\��ZXQ����
+NY�
+�\����\]Y
+H�ۘ�ZYHH�YN��[Y[���][[Y[��RY
+	��X�[�\��K��[K�\�^HH	؛����H[�H��][�]]]���YJN��[\˙���\�
+N�B�H�]�
+JH\��ۙ\�Y�][��
+NYX�[ۘ\�Y[��Y�[J	�\��\�[�	�	���]�H[H�؛[XH0�XۚX�ˈ�H[�\�[��X\�H�ݛ���N�][�]]]���YJN��[\˙���\�
+NB�[��X[��H�[�NB��\�[���[��[ۈ�[X\��]
+\���H�ۜ��\�H]�Z]�]�
+	��\K��]	�Y]��	���	�XY\�Έ�	��۝[�U\IΈ	�\X�][ۋڜ�ۉ�K���N���Ӌ���[��Y�J�Y\��Y�\Έ\����Y[��[YN���YP�Y[�K�\��[ےYJB�JNY�
+\�\˛��H��ۜ�\��H]�Z]�\˚��ۊ
+K��]�
+
+
+OO��JJN�����]�\��܊\���\��ܟ	�\����N�B��]\���\˚��ۊ
+NB����[Y[���][[Y[��RY
+	؝�\��K�Y]�[�\�[�\�	��X����\�\��N�\�[���[��[ۈ�\�\��
+H�ۜ���H��[Y[���][[Y[��RY
+	؝�\��N���\�X�YH�YN���[��\�SHݙ��YH�M��ZY�H�M���Y]Л�H�����[H��ۙH�����OH��\��[���܈�����K]�YH�������K[[�X�\H���[������K[[�Z��[�H���[���[OH�[�[X][ێ��\�\�\�[�X\�[��[�]H��]H�L�HL�NHHHKM���NKN�M��Ϗ�ݙψ�\�[�������H�ۜ��\�H]�Z]�]�
+	��\K��[[X\�^�I�Y]��	���	�XY\�Έ�	��۝[�U\IΈ	�\X�][ۋڜ�ۉ�K���N���Ӌ���[��Y�J��۝�\��][ێ�Y[��Y�[���Y[��[YN���YP�Y[�K�\��[ےYJB�JNY�
+\�\˛��H����]�\��܊
+N�ۜ��\�[[�H]�Z]�\˚��ۊ
+N�[�\�^�\���\�[[�NH�]�
+JH�[\�
+	Ӱ�����H����]�[�\�\����[�H�ݘ[Y[�K��N�B��[�[H���\�X�YH�[�N���[��\�SHݙ��YH�M��ZY�H�M���Y]Л�H�����[H��ۙH�����OH��\��[���܈�����K]�YH�������K[[�X�\H���[������K[[�Z��[�H���[���]H�LM�
+�L��L���M�L����L�L���L����Ϗ�[[�H�[��H�M�M��Ϗ[�HOH�L��LOH�N��H�L��L�H�L��Ϗ[�HOH�H�LOH�MH��H�MH�L�H�MH�Ϗ�ݙψ�\�\�]Y�[H�B�B���[��[ۈ�[�\�^�\���H�ۜ�����HH�[��˚����ۜ���H�]�����[�]�	�[I��ܛX]�	�M	�JN�ۜ��H�˚[�\��[�Y�T�^�K��]�Y
+
+N�ۜ�H�˚[�\��[�Y�T�^�K��]ZY�
+
+N�ۜ�X\��H���H�H�
+�X\���ۜ��T�HH�L
+�K̗K�T�L�H̍�L�
+LK�T��H̌KM�
+͗KԑSQHH̍
+K��̗KT��T��H�
+
+N�˜�]�[��܊����T�JN��˜�X�
+�
+	щ�N�˜�]�]���܊����T��N��˜�][�U�Y
+��N��˘�\��JX\���LK�LK	���N�˜�]^��܊����T��N��˜�]�۝�^�JL�N��˜�]�۝
+	�[�]X�I�	؛�	�N��˝^
+	ԑ��X\���LK�ˍK�[Yێ���[�\��JN�˜�]^��܊���ԑSQJN��˜�]�۝�^�JMJN��˜�]�۝
+	�[�]X�I�	؛�	�N��˝^
+	ԛ���\�[�K��X[��X\��̍��
+N�˜�]�۝�^�J�JN��˜�]�۝
+	�[�]X�I�	ۛܛX[	�N��˜�]^��܊����T��N��˝^
+	ӝ]�X������\�ܝ]�H	���\ܝ[Y[�[	�X\��̍���N�˜�]^��܊���ԑSQJN��˜�]�۝�^�JJN��˜�]�۝
+	�[�]X�I�	؛�	�N��˝^
+	ԑPU�SPp�������[X\����[Yێ�ܚY�	�JN�˜�]�۝
+	�[�]X�I�	ۛܛX[	�N��˜�]�۝�^�J
+N��˜�]^��܊����T��N��˝^
+��]_�]�]J
+K����[Q]T��[��	�P���K�[X\�����[Yێ�ܚY�	�JN�˜�]�[��܊����T�L�N��˜�X�
+
+�M�	щ�N�˜�]^��܊���ԑSQJN��˜�]�۝�^�JLJN��˜�]�۝
+	�[�]X�I�	؛�	�N��˝^
+��YP�Y[�KX\��
+NK�JN�˜�]�۝
+	�[�]X�I�	ۛܛX[	�N��˜�]�۝�^�J
+N��˜�]^��܊����T��N��˝^
+	ԙ[]0�ܚ[�H�X]�[Xp�������[X\��
+NK�K�[Yێ�ܚY�	�JN��ۜ��X��\�H��]�N�ؙ[W�\�\���][ΉЙ[KY\�\�H\���p������K���]�N��]]�YY\��X\�X\��][Ή�]]�YY\��XHHXI�K���]�N��\��ܛX[��I�][Ή�\��ܛX[��HH�[�[Y[���K���]�N��[[Y[�X�[��][Ή�[[Y[�p�����HY\����[�[���K���]�N��\��\�[���ܜܘ[	�][Ή�\��\0������ܜܘ[	�K���]�N��[�]�X�[��][Ή�[�]�p�����H\�Y�[���K���]�N��۝��ٛܝ\��][Ή�۝���ܝ\��K���]�N��۝���][��[��][Ή�۝��H][�������K���]�N�ۛ�Wܛ��\�[��][Ήӛ�H\�H�����\�[��B�N�]HH
+���[��[ۈYX�[ۘ\���\J
+H�˜�]�[��܊����T�JN��˜�X�
+LL��L�	щ�N�˜�]^��܊����T��N��˜�]�۝�^�J
+�N��˜�]�۝
+	�[�]X�I�	ۛܛX[	�N�˝^
+	ԛ���\�[�K��X[�0���]�X������\�ܝ]�H	���\ܝ[Y[�[	�X\��M�JN�˝^
+0�Y�[�H	��˚[�\��[��]�\��[�Y�R[���
+K�Y�S�[X�\�X�[X\��M�K�[Yێ�ܚY�	�JNB���[��[ۈYX�[ۘ\�Y�[�J
+HYX�[ۘ\���\J
+N��˘YY�J
+N�˜�]�[��܊����T�JN��˜�X�
+�M	щ�N�˜�]^��܊����T��N��˜�]�۝�^�J
+ˍJN��˜�]�۝
+	�[�]X�I�	؛�	�N��˝^
+	ԑ�1-�����T�S�K��PS��X\��JN�˜�]^��܊���ԑSQJN��˜�]�۝
+	�[�]X�I�	ۛܛX[	�N��˝^
+��YP�Y[�J��0���PU�SPp�������[X\��K�[Yێ�ܚY�	�JNHH�B���܈
+�ۜ��X�و�X��\�H�ۜ��۝]Y�H�\�X˘�]�WNY�
+X�۝]Y��۝]Y˝�[J
+OOOI��H�۝[�YNY�
+H�ML
+HYX�[ۘ\�Y�[�J
+N�˜�]�]���܊����T��N��˜�][�U�Y
+��N��˛[�JX\��KX\�����JN�H
+�HN�˜�]�۝�^�J
+N��˜�]�۝
+	�[�]X�I�	؛�	�N��˜�]^��܊����T�JN��˝^
+�X˝][˝�\\��\�J
+KX\��J�JNY�
+�X˘�]�HOOH	ۛ�Wܛ��\�[��H�ۜ�[�\�H�˜�]^��^�J�۝]Y���LL
+N�ۜ�[�Z^HH[�\˛[��
+�K�J�M�Y�
+J�J�[�Z^H�L��HYX�[ۘ\�Y�[�J
+N�˜�]�[��܊�
+K��̊N��˜��[�Y�X�
+X\��J�K��[�Z^K��	щ�N�˜�]�]���܊����T��N��˜�][�U�Y
+�JN��˜��[�Y�X�
+X\��J�K��[�Z^K��	���NH
+�HM�˜�]^��܊����T�JN��˜�]�۝
+	�[�]X�I�	�][X��N��˜�]�۝�^�JK�JN�܈
+]OL�O[�\˛[���J��H�˝^
+[�\��WKX\���KJ���J�K�JJNH
+�H[�\˛[��
+�K�J�M��۝[�YNB�H
+�HN�˜�]�۝
+	�[�]X�I�	ۛܛX[	�N��˜�]�۝�^�JK�JN��˜�]^��܊���T��T��N�ۜ�[�\�H�˜�]^��^�J�۝]Y���N�܈
+]OL�O[�\˛[���J��HY�
+H�L��HYX�[ۘ\�Y�[�J
+N�˝^
+[�\��WKX\��JN�H
+�H
+K�NB�H
+�H
+�B�YX�[ۘ\���\J
+N�ۜ�]RڙHH�]�]J
+K����[Q]T��[��	�P���K��\X�J����	�I�N�ۜ���YT�[�]^�Y�H��YP�Y[�K��\X�J�טK^�KV��p��NHK��	��K��\X�J���	���N�˜�]�J�X]�[XX�[��ۛ�YT�[�]^�Y�W��]Rڙ_K��
+NB���ܚ\����[O���^Y��[Y\��\�\����H��[�ٛܛN���]JY�N�B����[�ٛܛN���]J͌Y�N�B�B���[O��؛�O���[�

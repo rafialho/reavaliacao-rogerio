@@ -688,6 +688,7 @@ async function enviarMensagem() {
     if (resp.completed) {
       concluida = true;
       document.getElementById('secao-pdf').style.display = 'block';
+      // Não reabilitar o input
     } else {
       setInputAtivo(true);
       campo.focus();
@@ -729,7 +730,7 @@ async function gerarPDF() {
   const btn = document.getElementById('btn-pdf');
   btn.disabled = true;
   btn.innerHTML = `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:girar 1s linear infinite">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:girar 1s linear infinite">
       <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
     </svg>
     Gerando PDF...
@@ -895,6 +896,10 @@ function renderizarPDF(r) {
 
     // Destaque especial para "Nota para o Rogério"
     if (sec.chave === 'nota_rogerio') {
+      // Define a fonte ANTES de splitTextToSize para que os quebras de linha
+      // sejam calculadas com as métricas corretas (9.5pt italic, não 8pt bold)
+      doc.setFont('helvetica', 'italic');
+      doc.setFontSize(9.5);
       const linhas = doc.splitTextToSize(conteudo, cW - 10);
       const altCaixa = linhas.length * 5.5 + 16;
       // Garante que a caixa inteira cabe na página atual
@@ -906,8 +911,6 @@ function renderizarPDF(r) {
       doc.roundedRect(marg, y + 9, cW, altCaixa, 3, 3, 'S');
       y += 14;
       doc.setTextColor(...VERDE);
-      doc.setFont('helvetica', 'italic');
-      doc.setFontSize(9.5);
       // Renderiza linha a linha para garantir espaçamento exato dentro da caixa
       for (let i = 0; i < linhas.length; i++) {
         doc.text(linhas[i], marg + 5, y + 3 + i * 5.5);

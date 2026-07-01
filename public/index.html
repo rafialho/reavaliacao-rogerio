@@ -6,7 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#0a3d20">
-  <title>RogÃ©rio A. Fialho | ReavaliaÃ§Ã£o</title>
+  <title>Rogério A. Fialho | Reavaliação</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <style>
     :root {
@@ -32,7 +32,7 @@
       overscroll-behavior: none;
     }
 
-    /* âââ TELA DE BOAS-VINDAS âââââââââââââââââââââââââââââââââââââââ */
+    /* ─── TELA DE BOAS-VINDAS ─────────────────────────────────────── */
 
     #tela-inicio {
       display: flex;
@@ -160,7 +160,7 @@
       max-width: 320px;
     }
 
-    /* âââ TELA DE CHAT ââââââââââââââââââââââââââââââââââââââââââââââ */
+    /* ─── TELA DE CHAT ────────────────────────────────────────────── */
 
     #tela-chat {
       display: none;
@@ -169,7 +169,7 @@
       height: 100dvh;
     }
 
-    /* CabeÃ§alho */
+    /* Cabeçalho */
     .chat-header {
       display: flex;
       align-items: center;
@@ -220,7 +220,7 @@
       margin-top: 1px;
     }
 
-    /* Ãrea de mensagens */
+    /* Área de mensagens */
     #mensagens {
       flex: 1;
       overflow-y: auto;
@@ -272,7 +272,7 @@
       border-bottom-left-radius: 4px;
     }
 
-    /* Indicador de digitaÃ§Ã£o */
+    /* Indicador de digitação */
     #digitando {
       display: none;
       padding: 0 1rem 0.25rem;
@@ -305,7 +305,7 @@
       40%           { opacity: 1;   transform: scale(1); }
     }
 
-    /* BotÃ£o PDF */
+    /* Botão PDF */
     #secao-pdf {
       display: none;
       padding: 0.75rem 1rem 0;
@@ -333,7 +333,7 @@
     .btn-pdf:active { transform: scale(0.98); }
     .btn-pdf:disabled { opacity: 0.5; cursor: not-allowed; }
 
-    /* Ãrea de input */
+    /* Área de input */
     .area-input {
       padding: 0.75rem 1rem;
       padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
@@ -416,19 +416,19 @@
 </head>
 <body>
 
-<!-- âââ TELA DE INÃCIO ââââââââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- ─── TELA DE INÍCIO ──────────────────────────────────────────────── -->
 
 <div id="tela-inicio">
   <div class="monograma">RF</div>
-  <h1>RogÃ©rio A. Fialho</h1>
-  <p class="subtitulo-nome">NutriÃ§Ã£o Esportiva &amp; Comportamental</p>
+  <h1>Rogério A. Fialho</h1>
+  <p class="subtitulo-nome">Nutrição Esportiva &amp; Comportamental</p>
 
   <div class="card-inicio">
-    <div class="badge-tipo">ReavaliaÃ§Ã£o</div>
+    <div class="badge-tipo">Reavaliação</div>
     <p>
-      OlÃ¡! Sou a <strong>Lara</strong>, assistente do RogÃ©rio.
-      Vou conduzir a sua reavaliaÃ§Ã£o de forma tranquila e prÃ³xima,
-      coletando tudo que o RogÃ©rio precisa para calibrar ainda mais
+      Olá! Sou a <strong>Lara</strong>, assistente do Rogério.
+      Vou conduzir a sua reavaliação de forma tranquila e próxima,
+      coletando tudo que o Rogério precisa para calibrar ainda mais
       o seu acompanhamento.
     </p>
     <input
@@ -440,22 +440,22 @@
       autocomplete="given-name"
       autocapitalize="words"
     >
-    <button class="btn-primario" id="btn-iniciar">Iniciar ReavaliaÃ§Ã£o</button>
+    <button class="btn-primario" id="btn-iniciar">Iniciar Reavaliação</button>
   </div>
 
   <p class="nota-rodape">
-    Suas respostas sÃ£o confidenciais e serÃ£o analisadas exclusivamente pelo RogÃ©rio.
+    Suas respostas são confidenciais e serão analisadas exclusivamente pelo Rogério.
   </p>
 </div>
 
-<!-- âââ TELA DE CHAT ââââââââââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- ─── TELA DE CHAT ────────────────────────────────────────────────── -->
 
 <div id="tela-chat">
   <div class="chat-header">
     <div class="header-mono">RF</div>
     <div class="header-info">
-      <div class="header-nome">RogÃ©rio A. Fialho</div>
-      <div class="header-sub">ReavaliaÃ§Ã£o com Lara</div>
+      <div class="header-nome">Rogério A. Fialho</div>
+      <div class="header-sub">Reavaliação com Lara</div>
     </div>
   </div>
 
@@ -492,11 +492,11 @@
       </svg>
     </button>
   </div>
-  <p class="dica-input">Enter para enviar Â· Shift+Enter para nova linha</p>
+  <p class="dica-input">Enter para enviar · Shift+Enter para nova linha</p>
 </div>
 
 <script>
-// âââ SVG Guia de Fotos âââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── SVG Guia de Fotos ───────────────────────────────────────────────
 
 const SVG_FOTOS = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190">
   <rect width="300" height="190" fill="#0a3d20" rx="8"/>
@@ -517,7 +517,7 @@ const SVG_FOTOS = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190"
   <line x1="21" y1="142" x2="35" y2="142" stroke="#f5f0e8" stroke-width="1.5"/>
   <line x1="65" y1="142" x2="79" y2="142" stroke="#f5f0e8" stroke-width="1.5"/>
   <text x="50" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#c9a84c">FRENTE</text>
-  <text x="50" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="rgba(245,240,232,0.5)">pÃ©s na largura do quadril</text>
+  <text x="50" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="rgba(245,240,232,0.5)">pés na largura do quadril</text>
   <!-- COSTAS -->
   <circle cx="150" cy="47" r="9" fill="none" stroke="#f5f0e8" stroke-width="1.5"/>
   <line x1="150" y1="56" x2="150" y2="100" stroke="#f5f0e8" stroke-width="1.5"/>
@@ -531,7 +531,7 @@ const SVG_FOTOS = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190"
   <line x1="165" y1="142" x2="179" y2="142" stroke="#f5f0e8" stroke-width="1.5"/>
   <rect x="132" y="57" width="36" height="40" fill="rgba(201,168,76,0.18)" rx="3"/>
   <text x="150" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#c9a84c">COSTAS</text>
-  <text x="150" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="rgba(245,240,232,0.5)">costas Ã  mostra</text>
+  <text x="150" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="rgba(245,240,232,0.5)">costas à mostra</text>
   <!-- LATERAL -->
   <circle cx="250" cy="47" r="9" fill="none" stroke="#f5f0e8" stroke-width="1.5"/>
   <path d="M257 45 Q263 47 257 50" fill="none" stroke="#f5f0e8" stroke-width="1.2"/>
@@ -544,10 +544,10 @@ const SVG_FOTOS = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 190"
   <line x1="240" y1="142" x2="221" y2="142" stroke="#f5f0e8" stroke-width="1.5"/>
   <polygon points="218,142 224,138 224,146" fill="#c9a84c"/>
   <text x="250" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#c9a84c">LATERAL</text>
-  <text x="250" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="rgba(245,240,232,0.5)">braÃ§o colado Â· pÃ© p/ cÃ¢mera</text>
-  <!-- RodapÃ© -->
+  <text x="250" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" fill="rgba(245,240,232,0.5)">braço colado · pé p/ câmera</text>
+  <!-- Rodapé -->
   <rect x="0" y="170" width="300" height="20" fill="rgba(0,0,0,0.3)"/>
-  <text x="150" y="183" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(201,168,76,0.85)">celular vertical Â· umbigo Â· 2 metros Â· corpo inteiro</text>
+  <text x="150" y="183" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" fill="rgba(201,168,76,0.85)">celular vertical · umbigo · 2 metros · corpo inteiro</text>
 </svg>`;
 
 function mostrarGuiaFotos() {
@@ -561,7 +561,7 @@ function mostrarGuiaFotos() {
   scrollParaBaixo();
 }
 
-// âââ Estado ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── Estado ──────────────────────────────────────────────────────────
 
 let nomeCliente = '';
 let sessionId   = '';
@@ -569,7 +569,7 @@ let mensagens   = [];
 let concluida   = false;
 let enviando    = false;
 
-// âââ UtilitÃ¡rios âââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── Utilitários ─────────────────────────────────────────────────────
 
 function gerarId() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2);
@@ -607,7 +607,7 @@ function setInputAtivo(ativo) {
   document.getElementById('btn-enviar').disabled = !ativo;
 }
 
-// âââ Iniciar conversa âââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── Iniciar conversa ─────────────────────────────────────────────────
 
 document.getElementById('btn-iniciar').addEventListener('click', iniciarChat);
 document.getElementById('campo-nome').addEventListener('keydown', e => {
@@ -640,12 +640,12 @@ async function iniciarChat() {
     document.getElementById('campo-msg').focus();
   } catch (e) {
     esconderDigitando();
-    adicionarMensagem('assistant', 'Oi! Tive um problema tÃ©cnico. Pode atualizar a pÃ¡gina e tentar novamente?');
+    adicionarMensagem('assistant', 'Oi! Tive um problema técnico. Pode atualizar a página e tentar novamente?');
     setInputAtivo(false);
   }
 }
 
-// âââ Enviar mensagem ââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── Enviar mensagem ──────────────────────────────────────────────────
 
 document.getElementById('btn-enviar').addEventListener('click', enviarMensagem);
 
@@ -688,14 +688,13 @@ async function enviarMensagem() {
     if (resp.completed) {
       concluida = true;
       document.getElementById('secao-pdf').style.display = 'block';
-      // NÃ£o reabilitar o input
     } else {
       setInputAtivo(true);
       campo.focus();
     }
   } catch (e) {
     esconderDigitando();
-    adicionarMensagem('assistant', 'Ops, tive um problema tÃ©cnico. Pode tentar enviar de novo?');
+    adicionarMensagem('assistant', 'Ops, tive um problema técnico. Pode tentar enviar de novo?');
     setInputAtivo(true);
     campo.focus();
   }
@@ -716,13 +715,13 @@ async function chamarChat(msgs) {
 
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
-    throw new Error(err.error || 'Erro de comunicaÃ§Ã£o.');
+    throw new Error(err.error || 'Erro de comunicação.');
   }
 
   return res.json();
 }
 
-// âââ GeraÃ§Ã£o de PDF âââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ─── Geração de PDF ───────────────────────────────────────────────────
 
 document.getElementById('btn-pdf').addEventListener('click', gerarPDF);
 
@@ -730,7 +729,7 @@ async function gerarPDF() {
   const btn = document.getElementById('btn-pdf');
   btn.disabled = true;
   btn.innerHTML = `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:girar 1s linear infinite">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation:girar 1s linear infinite">
       <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
     </svg>
     Gerando PDF...
@@ -752,7 +751,7 @@ async function gerarPDF() {
     const resumo = await res.json();
     renderizarPDF(resumo);
   } catch (e) {
-    alert('NÃ£o foi possÃ­vel gerar o PDF. Tente novamente.');
+    alert('Não foi possível gerar o PDF. Tente novamente.');
   } finally {
     btn.disabled = false;
     btn.innerHTML = `
@@ -783,12 +782,12 @@ function renderizarPDF(r) {
   const ESCURO = [40, 40, 40];
   const CINZA  = [110, 110, 110];
 
-  // ââ CabeÃ§alho ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+  // ── Cabeçalho ──────────────────────────────────────────────────────
 
   doc.setFillColor(...VERDE);
   doc.rect(0, 0, pW, 48, 'F');
 
-  // CÃ­rculo monograma
+  // Círculo monograma
   doc.setDrawColor(...OURO);
   doc.setLineWidth(0.6);
   doc.circle(marg + 11, 24, 11, 'S');
@@ -801,18 +800,18 @@ function renderizarPDF(r) {
   doc.setTextColor(...CREME);
   doc.setFontSize(15);
   doc.setFont('helvetica', 'bold');
-  doc.text('RogÃ©rio A. Fialho', marg + 27, 20);
+  doc.text('Rogério A. Fialho', marg + 27, 20);
 
   doc.setFontSize(8.5);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...OURO);
-  doc.text('NutriÃ§Ã£o Esportiva & Comportamental', marg + 27, 27);
+  doc.text('Nutrição Esportiva & Comportamental', marg + 27, 27);
 
   // Tipo e data no canto direito
   doc.setTextColor(...CREME);
   doc.setFontSize(9);
   doc.setFont('helvetica', 'bold');
-  doc.text('REAVALIAÃÃO', pW - marg, 20, { align: 'right' });
+  doc.text('REAVALIAÇÃO', pW - marg, 20, { align: 'right' });
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(8);
@@ -830,20 +829,20 @@ function renderizarPDF(r) {
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(8);
   doc.setTextColor(...OURO);
-  doc.text('RelatÃ³rio de ReavaliaÃ§Ã£o', pW - marg, 59.5, { align: 'right' });
+  doc.text('Relatório de Reavaliação', pW - marg, 59.5, { align: 'right' });
 
-  // ââ SeÃ§Ãµes âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+  // ── Seções ─────────────────────────────────────────────────────────
 
   const secoes = [
-    { chave: 'bem_estar',          titulo: 'Bem-estar e DisposiÃ§Ã£o' },
+    { chave: 'bem_estar',          titulo: 'Bem-estar e Disposição' },
     { chave: 'atividades_diarias', titulo: 'Atividades do Dia a Dia' },
     { chave: 'performance',        titulo: 'Performance e Rendimento' },
-    { chave: 'alimentacao',        titulo: 'AlimentaÃ§Ã£o e AdesÃ£o ao Plano' },
-    { chave: 'percepcao_corporal', titulo: 'PercepÃ§Ã£o Corporal' },
-    { chave: 'motivacao',          titulo: 'MotivaÃ§Ã£o e Desafios' },
+    { chave: 'alimentacao',        titulo: 'Alimentação e Adesão ao Plano' },
+    { chave: 'percepcao_corporal', titulo: 'Percepção Corporal' },
+    { chave: 'motivacao',          titulo: 'Motivação e Desafios' },
     { chave: 'pontos_fortes',      titulo: 'Pontos Fortes' },
-    { chave: 'pontos_atencao',     titulo: 'Pontos de AtenÃ§Ã£o' },
-    { chave: 'nota_rogerio',       titulo: 'Nota para o RogÃ©rio' }
+    { chave: 'pontos_atencao',     titulo: 'Pontos de Atenção' },
+    { chave: 'nota_rogerio',       titulo: 'Nota para o Rogério' }
   ];
 
   let y = 74;
@@ -851,16 +850,16 @@ function renderizarPDF(r) {
   function adicionarPagina() {
     adicionarRodape();
     doc.addPage();
-    // Mini cabeÃ§alho nas pÃ¡ginas seguintes
+    // Mini cabeçalho nas páginas seguintes
     doc.setFillColor(...VERDE);
     doc.rect(0, 0, pW, 14, 'F');
     doc.setTextColor(...OURO);
     doc.setFontSize(7.5);
     doc.setFont('helvetica', 'bold');
-    doc.text('RF  Â·  ROGÃRIO A. FIALHO', marg, 9);
+    doc.text('RF  ·  ROGÉRIO A. FIALHO', marg, 9);
     doc.setTextColor(...CREME);
     doc.setFont('helvetica', 'normal');
-    doc.text(nomeCliente + '  Â·  REAVALIAÃÃO', pW - marg, 9, { align: 'right' });
+    doc.text(nomeCliente + '  ·  REAVALIAÇÃO', pW - marg, 9, { align: 'right' });
     y = 24;
   }
 
@@ -870,35 +869,35 @@ function renderizarPDF(r) {
     doc.setTextColor(...OURO);
     doc.setFontSize(7);
     doc.setFont('helvetica', 'normal');
-    doc.text('RogÃ©rio A. Fialho Â· NutriÃ§Ã£o Esportiva & Comportamental', marg, pH - 4.5);
+    doc.text('Rogério A. Fialho · Nutrição Esportiva & Comportamental', marg, pH - 4.5);
     const pg = doc.internal.getCurrentPageInfo().pageNumber;
-    doc.text(`PÃ¡gina ${pg}`, pW - marg, pH - 4.5, { align: 'right' });
+    doc.text(`Página ${pg}`, pW - marg, pH - 4.5, { align: 'right' });
   }
 
   for (const sec of secoes) {
     const conteudo = r[sec.chave];
     if (!conteudo || conteudo.trim() === '') continue;
 
-    // Verificar espaÃ§o na pÃ¡gina
+    // Verificar espaço na página
     if (y > pH - 50) adicionarPagina();
 
-    // Linha decorativa acima do tÃ­tulo
+    // Linha decorativa acima do título
     doc.setDrawColor(...OURO);
     doc.setLineWidth(0.3);
     doc.line(marg, y, marg + cW, y);
     y += 1;
 
-    // TÃ­tulo da seÃ§Ã£o
+    // Título da seção
     doc.setFontSize(8);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(...VERDE);
     doc.text(sec.titulo.toUpperCase(), marg, y + 5);
 
-    // Destaque especial para "Nota para o RogÃ©rio"
+    // Destaque especial para "Nota para o Rogério"
     if (sec.chave === 'nota_rogerio') {
       const linhas = doc.splitTextToSize(conteudo, cW - 10);
       const altCaixa = linhas.length * 5.5 + 16;
-      // Garante que a caixa inteira cabe na pÃ¡gina atual
+      // Garante que a caixa inteira cabe na página atual
       if (y + 9 + altCaixa > pH - 22) adicionarPagina();
       doc.setFillColor(245, 240, 232);
       doc.roundedRect(marg, y + 9, cW, altCaixa, 3, 3, 'F');
@@ -909,7 +908,7 @@ function renderizarPDF(r) {
       doc.setTextColor(...VERDE);
       doc.setFont('helvetica', 'italic');
       doc.setFontSize(9.5);
-      // Renderiza linha a linha para garantir espaÃ§amento exato dentro da caixa
+      // Renderiza linha a linha para garantir espaçamento exato dentro da caixa
       for (let i = 0; i < linhas.length; i++) {
         doc.text(linhas[i], marg + 5, y + 3 + i * 5.5);
       }
@@ -936,10 +935,10 @@ function renderizarPDF(r) {
 
   adicionarRodape();
 
-  // ââ Download ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+  // ── Download ────────────────────────────────────────────────────────
 
   const dataHoje = new Date().toLocaleDateString('pt-BR').replace(/\//g, '-');
-  const nomeSanitizado = nomeCliente.replace(/[^a-zA-ZÃ-Ã¿0-9 ]/g, '').replace(/ /g, '_');
+  const nomeSanitizado = nomeCliente.replace(/[^a-zA-ZÀ-ÿ0-9 ]/g, '').replace(/ /g, '_');
   doc.save(`Reavaliacao_${nomeSanitizado}_${dataHoje}.pdf`);
 }
 </script>
